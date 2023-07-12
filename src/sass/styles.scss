@@ -1,0 +1,15 @@
+// Import base styles
+@import "base/variables";
+@import "base/mixins";
+@import "base/placeholders";
+@import "base/global";
+
+// Import components styles
+@import "components/_components.scss";
+
+// Import layouts styles
+@import "layouts/_header.scss";
+@import "layouts/_footer.scss";
+
+// Import pages styles
+@import "./pages/_index.scss";

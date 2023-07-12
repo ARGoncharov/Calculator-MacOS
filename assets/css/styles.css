@@ -1,7 +1,134 @@
-html,
-body {
-  margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+.page.index * {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+}
+
+.page.index .calculator-component {
+  margin: auto;
+  max-width: 232px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.page.index .calculator-component button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #FFFFFF;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.page.index .calculator-component .button-menu {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  line-height: 1;
+  vertical-align: middle;
+  border-radius: 100%;
+  font-size: 10px;
   padding: 0;
-  -moz-osx-font-smoothings: grayscale;
-  -webkit-font-smoothing: antialiased;
+  color: #333333;
+}
+
+.page.index .calculator-component .button-menu + .button-menu {
+  margin-left: 8px;
+}
+
+.page.index .calculator-component .button-menu span {
+  opacity: 0;
+}
+
+.page.index .calculator-component .button-menu:nth-child(1) {
+  background-color: #FF5F57;
+}
+
+.page.index .calculator-component .button-menu:nth-child(2) {
+  background-color: #FFBF2E;
+}
+
+.page.index .calculator-component .button-menu:nth-child(3) {
+  background-color: #26C940;
+}
+
+.page.index .calculator-component .menu-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #333333;
+  padding: 8px 8px 0 8px;
+}
+
+.page.index .calculator-component .menu-section:hover .button-menu span {
+  opacity: 1;
+}
+
+.page.index .calculator-component .result-section {
+  background-color: #333333;
+  padding: 0 18px;
+}
+
+.page.index .calculator-component .result-section span {
+  display: block;
+  text-align: right;
+  font-size: 48px;
+  font-weight: 200;
+  color: #FFFFFF;
+  line-height: 56px;
+}
+
+.page.index .calculator-component .calc-section .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.page.index .calculator-component .calc-section .row button {
+  -webkit-box-shadow: -1px -1px 0 0 #333333 inset;
+  box-shadow: -1px -1px 0 0 #333333 inset;
+}
+
+.page.index .calculator-component .calc-section .row:last-child .button-num:first-child {
+  width: 50%;
+}
+
+.page.index .calculator-component .calc-section .button-option,
+.page.index .calculator-component .calc-section .button-num,
+.page.index .calculator-component .calc-section .button-operator {
+  font-size: 23px;
+  line-height: 1;
+  width: 25%;
+  padding: 12px 2px;
+}
+
+.page.index .calculator-component .calc-section .button-option {
+  background-color: rgb(96, 96, 96);
+}
+
+.page.index .calculator-component .calc-section .button-option:active {
+  background-color: #939393;
+}
+
+.page.index .calculator-component .calc-section .button-num {
+  background-color: rgb(122, 122, 122);
+}
+
+.page.index .calculator-component .calc-section .button-num:active {
+  background-color: #adadad;
+}
+
+.page.index .calculator-component .calc-section .button-operator {
+  background-color: rgb(242, 163, 60);
+}
+
+.page.index .calculator-component .calc-section .button-operator:active {
+  background-color: #f8d09c;
 }

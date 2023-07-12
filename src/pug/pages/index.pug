@@ -1,3 +1,41 @@
 extends ../layouts/default-layout.pug
+
 block content
-  h1 Hello World!
+  .page.index
+    .calculator-component
+      .menu-section
+        button.button-menu
+          span x
+        button.button-menu
+          span -
+        button.button-menu
+          span +
+
+      .result-section
+        span(id="result-span") 0
+
+      .calc-section
+        .row
+          button.button-option(onclick="clearResult()") AC
+          button.button-option(onclick="toggleNegative()") +/-
+          button.button-option(onclick="clickPercentage()") %
+          button.button-operator(onclick="processOperator('&divide')") &divide
+        .row
+          button.button-num(onclick="pressNumberButton(7)") 7
+          button.button-num(onclick="pressNumberButton(8)") 8
+          button.button-num(onclick="pressNumberButton(9)") 9
+          button.button-operator(onclick="processOperator('x')") x
+        .row
+          button.button-num(onclick="pressNumberButton(4)") 4
+          button.button-num(onclick="pressNumberButton(5)") 5
+          button.button-num(onclick="pressNumberButton(6)") 6
+          button.button-operator(onclick="processOperator('-')") -
+        .row
+          button.button-num(onclick="pressNumberButton(1)") 1
+          button.button-num(onclick="pressNumberButton(2)") 2
+          button.button-num(onclick="pressNumberButton(3)") 3
+          button.button-operator(onclick="processOperator('+')") +
+        .row
+          button.button-num(onclick="pressNumberButton(0)") 0
+          button.button-num(onclick="clickPeriod()") ,
+          button.button-operator(onclick="pressEqual()") =

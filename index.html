@@ -11,7 +11,47 @@
   <body>
     <div class="app">
       <header></header>
-      <h1>Hello World!</h1>
+      <div class="page index">
+        <div class="calculator-component">
+          <div class="menu-section">
+            <button class="button-menu"><span>x</span></button>
+            <button class="button-menu"><span>-</span></button>
+            <button class="button-menu"><span>+</span></button>
+          </div>
+          <div class="result-section"><span id="result-span">0</span></div>
+          <div class="calc-section">
+            <div class="row">
+              <button class="button-option" onclick="clearResult()">AC</button>
+              <button class="button-option" onclick="toggleNegative()">+/-</button>
+              <button class="button-option" onclick="clickPercentage()">%</button>
+              <button class="button-operator" onclick="processOperator('&amp;divide')">&divide</button>
+            </div>
+            <div class="row">
+              <button class="button-num" onclick="pressNumberButton(7)">7</button>
+              <button class="button-num" onclick="pressNumberButton(8)">8</button>
+              <button class="button-num" onclick="pressNumberButton(9)">9</button>
+              <button class="button-operator" onclick="processOperator('x')">x</button>
+            </div>
+            <div class="row">
+              <button class="button-num" onclick="pressNumberButton(4)">4</button>
+              <button class="button-num" onclick="pressNumberButton(5)">5</button>
+              <button class="button-num" onclick="pressNumberButton(6)">6</button>
+              <button class="button-operator" onclick="processOperator('-')">-</button>
+            </div>
+            <div class="row">
+              <button class="button-num" onclick="pressNumberButton(1)">1</button>
+              <button class="button-num" onclick="pressNumberButton(2)">2</button>
+              <button class="button-num" onclick="pressNumberButton(3)">3</button>
+              <button class="button-operator" onclick="processOperator('+')">+</button>
+            </div>
+            <div class="row">
+              <button class="button-num" onclick="pressNumberButton(0)">0</button>
+              <button class="button-num" onclick="clickPeriod()">,</button>
+              <button class="button-operator" onclick="pressEqual()">=</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <footer></footer>
     </div>
     <!-- Scripts-->

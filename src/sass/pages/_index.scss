@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.page.index {
+  * {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+  }
+
+  .calculator-component {
+    margin: auto;
+    max-width: 232px;
+    overflow: hidden;
+    border-radius: 8px;
+
+    button {
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 700;
+      color: #FFFFFF;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .button-menu {
+      display: inline-block;
+      height: 12px;
+      width: 12px;
+      line-height: 1;
+      vertical-align: middle;
+      border-radius: 100%;
+      font-size: 10px;
+      padding: 0;
+      color: #333333;
+
+      & + .button-menu {
+        margin-left: 8px;
+      }
+
+      span {
+        opacity: 0;
+      }
+
+      &:nth-child(1) {
+        background-color: #FF5F57;
+      }
+
+      &:nth-child(2) {
+        background-color: #FFBF2E;
+      }
+
+      &:nth-child(3) {
+        background-color: #26C940;
+      }
+    }
+
+    .menu-section {
+      display: flex;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      background-color: #333333;
+      padding: 8px 8px 0 8px;
+
+      &:hover {
+        .button-menu span {
+          opacity: 1;
+        }
+      }
+    }
+
+    .result-section {
+      background-color: #333333;
+      padding: 0 18px;
+
+      span {
+        display: block;
+        text-align: right;
+        font-size: 48px;
+        font-weight: 200;
+        color: #FFFFFF;
+        line-height: 56px;
+      }
+    }
+
+    .calc-section {
+      .row {
+        display: flex;
+        align-content: center;
+
+        button {
+          box-shadow: -1px -1px 0 0 #333333 inset;
+        }
+
+        &:last-child {
+          .button-num:first-child {
+            width: calc(100% / 4 * 2);
+          }
+        }
+      }
+
+      .button-option,
+      .button-num,
+      .button-operator {
+        font-size: 23px;
+        line-height: 1;
+        width: calc(100% / 4);
+        padding: 12px 2px;
+      }
+
+      .button-option {
+        background-color: rgb(96, 96, 96);
+
+        &:active {
+          background-color: lighten(rgb(96, 96, 96), 20%);
+        }
+      }
+
+      .button-num {
+        background-color: rgb(122, 122, 122);
+
+        &:active {
+          background-color: lighten(rgb(122, 122, 122), 20%);
+        }
+      }
+
+      .button-operator {
+        background-color: rgb(242, 163, 60);
+
+        &:active {
+          background-color: lighten(rgb(242, 163, 60), 20%);
+        }
+      }
+    }
+  }
+}
+
